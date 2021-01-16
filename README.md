@@ -1,3 +1,12 @@
+# Youtube API
+
+Angular app made using the youtube API, HTTP interceptors and resolvers.
+
+Check it out! ---> [Yourpage](http://projects.matiaskupfer.com/youtube-api)
+
+author: Matias Kupfer
+
+
 # Resolvers
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.0.
