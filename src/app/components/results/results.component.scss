@@ -1,0 +1,52 @@
+.channel-card {
+  max-width: 400px;
+
+  mat-card-content {
+    mat-icon {
+      vertical-align: middle;
+      margin: 0 5px;
+    }
+
+    .statistics {
+      display: flex;
+      justify-content: space-around;
+    }
+  }
+}
+
+.avatar {
+  background-image: url('https://storage.googleapis.com/gweb-uniblog-publish-prod/images/YouTube.max-1100x1100.png');
+  background-size: cover;
+}
+
+div.flex {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+div.right {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+h1 {
+  font-size: 3em;
+  font-variant: small-caps;
+}
+
+
+@media only screen and (max-width: 900px) {
+  div.flex {
+    flex-direction: column;
+  }
+
+  .channel-card {
+    margin: 0 auto 50px;
+  }
+
+  iframe {
+    border: 10px solid transparent;
+  }
+}

@@ -1,0 +1,8 @@
+<mat-form-field class="example-full-width">
+  <mat-label>Search on youtube</mat-label>
+  <label>
+    <input matInput placeholder="Casey Neistat" [(ngModel)]="search">
+  </label>
+  <button mat-icon-button matSuffix [routerLink]="'/results/' + search"><mat-icon>search</mat-icon></button>
+  <mat-hint>Your search: '<b>{{search}}</b>'</mat-hint>
+</mat-form-field>

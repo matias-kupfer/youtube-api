@@ -1,0 +1,19 @@
+.content {
+  padding: 30px 20px;
+}
+
+mat-icon {
+  vertical-align: middle;
+}
+p {
+  font-size: 12px;
+  position: fixed;
+  bottom: 5px;
+  right: 5px;
+  margin: 0;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+

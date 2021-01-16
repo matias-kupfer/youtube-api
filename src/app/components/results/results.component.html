@@ -1,0 +1,49 @@
+<div class="flex">
+  <mat-card class="channel-card">
+    <mat-card-header>
+      <div mat-card-avatar class="avatar"></div>
+      <mat-card-title>{{channel.snippet.title}}</mat-card-title>
+      <mat-card-subtitle>{{channel.snippet.publishedAt}}</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image [src]="channel.snippet.thumbnails.high.url" alt="Youtube channel profile picture">
+    <mat-card-content>
+      <p>{{channel.snippet.description}}</p>
+      <br>
+
+      <div class="statistics">
+        <div>
+          <mat-icon>subscriptions</mat-icon>
+          <span>{{youtuber.items[0].statistics.subscriberCount}}</span>
+        </div>
+        <div>
+          <mat-icon>remove_red_eye</mat-icon>
+          <span>{{youtuber.items[0].statistics.viewCount}}</span>
+        </div>
+        <div>
+          <mat-icon>filter_1</mat-icon>
+          <span>{{youtuber.items[0].statistics.videoCount}}</span>
+        </div>
+      </div>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button color="primary">
+        <a target="_blank" [href]="'https://www.youtube.com/channel/' + channel.id.channelId">CHANNEL</a>
+      </button>
+      <button mat-button color="accent">
+        <a target="_blank" [href]="'https://www.youtube.com/channel/' + channel.id.channelId + '?sub_confirmation=1'">SUBSCRIBE</a>
+      </button>
+    </mat-card-actions>
+  </mat-card>
+
+  <div class="right">
+    <mat-spinner color="accent" *ngIf="showLoader"></mat-spinner>
+    <button mat-raised-button color="accent" *ngIf="!latestVideos && !showLoader" (click)="getVideosByChannelID()">Load videos
+    </button>
+    <ng-container *ngIf="!showLoader && latestVideos">
+      <div class="video" *ngFor="let video of latestVideos.items">
+        <iframe id="iframe" type="text/html" width="360" height="200"
+                [src]="iframeLink + video.id.videoId | IframePipe"allowfullscreen></iframe>
+      </div>
+    </ng-container>
+  </div>
+</div>
