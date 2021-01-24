@@ -2,7 +2,7 @@
 
 Angular app made using the youtube API, HTTP interceptors and resolvers.
 
-Check it out! ---> [Youtube-API](http://projects.matiaskupfer.com/youtube-api)
+Check it out! ---> [Youtube-API](https://projects.matiaskupfer.com/youtube-api)
 
 author: Matias Kupfer
 
